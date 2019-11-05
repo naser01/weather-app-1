@@ -1,0 +1,29 @@
+.search {
+    margin-left: 500px;
+    margin-top: 25px;
+    color: rgb(94, 94, 94); 
+    font-size: 20px;
+}
+
+.search input {
+    height: 30px;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+}
+
+.search button {
+    background-color: indianred;
+    border: 1px solid #DB5461;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    outline: none;
+}
+
+.search button:hover {
+    background-color: white;
+    color: #DB5461;
+}
