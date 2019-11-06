@@ -1,3 +1,4 @@
+/****HEADER****/
 .search {
     margin-left: 500px;
     margin-top: 25px;
@@ -26,4 +27,31 @@
 .search button:hover {
     background-color: white;
     color: #DB5461;
+}
+/**************
+****CAROUSEL***
+**************/
+
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.carousel__track {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.carousel__slider {
+    position: absolute;
+    background-image: url(/src/img/sky1.jpg);
+    width: 100%;
+    height: 500px;
+}
+
+body {
+    background-color:rgba(34, 34, 224, 0.856);
 }
