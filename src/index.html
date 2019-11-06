@@ -8,14 +8,22 @@
 </head>
 
 <body>
+    
     <form class="search">
         <input type="search" placeholder="City">
+        <select class="num__days" placeholder="Days">
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+        </select>
         <button type="submit">Search</button>
     </form>
     <hr>
 
+
     <div class="carousel">
-        <button class="carousel__button">
+        <button class="carousel__button btn-left">
             <img src="./img/iconmonstr-arrow-left-64.svg" alt="">
         </button>
         <div class="carousel__track_container">
@@ -23,7 +31,7 @@
                 <li class="carousel__slider"></li>
             </ul>
         </div>
-        <button class="carousel__button">
+        <button class="carousel__button btn-right">
             <img src="./img/iconmonstr-arrow-right-63.svg" alt="">
         </button>
     </div>
