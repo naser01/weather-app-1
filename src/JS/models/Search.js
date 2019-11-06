@@ -7,7 +7,7 @@ export default class Search {
 
     async getResults() {
         try {
-            const res = await axios(`api.openweathermap.org/data/2.5/forecast?q=${this.name}`)
+            const res = await axios(`https://www.metaweather.com//api/location/search/?query=(query)${this.name}`)
         } catch (error) {
             alert(error);
         }
