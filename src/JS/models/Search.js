@@ -14,7 +14,6 @@ export default class Search {
         catch (erorr){
             alert(error)
         }
-        getResults('amman');
     };
 }
 
