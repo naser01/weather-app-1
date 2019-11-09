@@ -7,9 +7,9 @@ export default class Search {
     }
     async getResults() {
         try {
-            const res = await axios(`${proxy}api.openweathermap.org/data/2.5/weather?q=${this.query}&APPID=${key}`)
-            this.res = res
-            console.log(this.res);
+            const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&cnt=5&APPID=${key}`)
+            this.result = res.data.list
+            console.log(this.result);
         }
         catch (erorr){
             alert('error')

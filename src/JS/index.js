@@ -1,22 +1,20 @@
 import Search from './models/Search';
-import searchView from './views/searchView';
+import searchView from './views/searchView.js';
 import { elements } from './views/base';
 
-/*elements.searchBtn.addEventListener('click', ()=>{
+elements.searchBtn.addEventListener('click', ()=>{
     const val = document.getElementById('search__val').value; 
     const search = new Search(val);
     search.getResults();
-    console.log(val); 
-    return val; 
-})*/
+})
 
-const state = {};
+//const state = {};
 
 /** 
  * SEARCH CONTROLLER
  */
 
-const controlSearch = async () => {
+/*const controlSearch = async () => {
     //1)Get query from view
     const query = searchView.getInput();
     
@@ -32,10 +30,11 @@ const controlSearch = async () => {
             alert('Something wrong with the search...')
         }
     }
-    elements.searchForm.addEventListener('submit', e =>{
-        e.preventDefault();
-        controlSearch();       
-    });
 }
 
-controlSearch();
+elements.searchForm.addEventListener('click', e =>{
+    e.preventDefault();
+    controlSearch();       
+});*/
+
+

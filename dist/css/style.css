@@ -63,6 +63,7 @@ body {
     height: 500px;
     background-image: url(../img/sky1.jpg);
     margin: 20px 0 20px 0;
+    border-radius: 5px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.123);
 }
 
