@@ -8,13 +8,27 @@
 </head>
 
 <body>
+    
     <form class="search">
-        <input type="search" placeholder="City">
-        <button type="submit">Search</button>
+        <input type="text" placeholder="City" id="search__val">
+        <button id="search-btn">Search</button>
     </form>
     <hr>
 
 
-<script type="text/javascript" src="JS/bundle.js"></script></body>
+    <div class="carousel">
+        <button class="carousel__button btn-left">
+            <img src="./img/iconmonstr-arrow-left-64.svg" alt="">
+        </button>
+        <div class="carousel__track_container">
+            <ul class="carousel__track">
+                <li class="carousel__slider"></li>
+            </ul>
+        </div>
+        <button class="carousel__button btn-right">
+            <img src="./img/iconmonstr-arrow-right-63.svg" alt="">
+        </button>
+    </div>
 
+<script type="text/javascript" src="JS/bundle.js"></script></body>
 </html>

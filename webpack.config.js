@@ -9,9 +9,9 @@ module.exports = {
     },
     devServer: {
         contentBase: './dist',
-        port: 8080
+        /*port: 8080
         // Send API requests on localhost to API server get around CORS.
-        /*proxy: {
+        proxy: {
            '/api': {
               target: {
                  host: "0.0.0.0",

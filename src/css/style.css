@@ -12,7 +12,7 @@
     outline: none;
 }
 
-.search button {
+/*.search button {
     background-color: indianred;
     border: 1px solid #DB5461;
     border-radius: 5px;
@@ -21,7 +21,7 @@
     height: 30px;
     width: 80px;
     outline: none;
-}
+}*/
 
 .search button:hover {
     background-color: white;
