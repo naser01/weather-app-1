@@ -2,11 +2,15 @@ import Search from './models/Search';
 import searchView from './views/searchView.js';
 import { elements } from './views/base';
 
-elements.searchBtn.addEventListener('click', ()=>{
+
+/*elements.searchBtn.addEventListener('click', ()=>{
     const val = document.getElementById('search__val').value; 
     const search = new Search(val);
     search.getResults();
-})
+})*/
+
+const search = new Search('london');
+search.getResults();
 
 //const state = {};
 
