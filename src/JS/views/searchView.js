@@ -1,4 +1,7 @@
 import {elements} from './base';
+//import allArr from '../models/Search';
+//import Search from '../models/Search';
+
 
 export const getInput = () => elements.searchVal.value;
 
@@ -18,3 +21,5 @@ export const renderWeather = (result) => {
         </li>
     `;
 };
+
+

@@ -31,14 +31,6 @@ export default class Search {
         try {
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&cnt=5&APPID=${key}`)
             let i;
-            const allArr = {
-                tempArr:[],
-                tempMaxArr: [],
-                tempMinArr: [],
-                cloudsArr: [],
-                rainArr: [],
-                weatherArr: []
-            }
             for(i=0; i<5; i++){
                 this.result = res.data.list[i];
                 this.temp = this.result.main.temp;
@@ -47,20 +39,43 @@ export default class Search {
                 this.clouds = this.result.clouds.all;
                 this.rain = this.result.rain;
                 this.weather = this.result.weather[0].description;
+                /*
+                tempArr.push(Math.round(this.temp + (-273.15)));
+                tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
+                tempMinArr.push(Math.round(this.tempMin + (-273.15)));
+                cloudsArr.push(this.clouds)
+                rainArr.push(this.rain);
+                weatherArr.push(this.weather);
+                */
+                /*
                 allArr.tempArr.push(Math.round(this.temp + (-273.15)));
                 allArr.tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
                 allArr.tempMinArr.push(Math.round(this.tempMin + (-273.15)));
                 allArr.cloudsArr.push(this.clouds)
                 allArr.rainArr.push(this.rain);
                 allArr.weatherArr.push(this.weather);
+                */
             }
         }
         catch (erorr){
             alert('error')
         }
     }
-    celsius() {
-        el -273.15;
+    pushData(){
+        let tempArr = [];
+        const tempMaxArr = [];
+        const tempMinArr = [];
+        const cloudsArr = [];
+        const rainArr = [];
+        const weatherArr = [];
+        tempArr.push(Math.round(this.temp + (-273.15)));
+        tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
+        tempMinArr.push(Math.round(this.tempMin + (-273.15)));
+        cloudsArr.push(this.clouds)
+        rainArr.push(this.rain);
+        weatherArr.push(this.weather);
+        console.log(tempArr);
+        
     }
 }
 
