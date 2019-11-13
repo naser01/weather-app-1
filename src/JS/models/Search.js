@@ -50,6 +50,26 @@ export default class Search {
                 }
             }
 
+            function formatDate(date) {
+                const monthNames = [
+                  "JAN", "FEB", "MAR",
+                  "APRIL", "MAY", "JUN", "JUL",
+                  "AUG", "SEP", "OCT",
+                  "NOV", "DEC"
+                ];
+
+                const weekday = ["Sunday","Monday","Tuesday","Wednesday",
+                    "Thursday","Friday","Saturday"
+                ];
+                               
+                const wday = weekday[date.getDay()];
+                const day = date.getDate();
+                const monthIndex = date.getMonth();
+                const year = date.getFullYear();
+              
+                return wday + ',' + ' ' + day + ' ' + monthNames[monthIndex] + ' ' + year;
+            }
+
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&cnt=5&APPID=${key}`)
             const tempArr = [];
             const tempMaxArr = [];
@@ -62,6 +82,8 @@ export default class Search {
             for(i=0; i<5; i++){
 
                 this.result = res.data.list[i];
+                this.city = res.data.city.name;
+                this.country = res.data.city.country;
                 this.temp = this.result.main.temp;
                 this.tempMax = this.result.main.temp_max;
                 this.tempMin = this.result.main.temp_min;
@@ -76,8 +98,9 @@ export default class Search {
                 cloudsArr.push(this.clouds)
                 rainArr.push(this.rain);
                 weatherArr.push(this.weather);
-            }    
-
+            }  
+            console.log(res);
+            
             const markup = `
                 <li class="carousel__slider">
                         <div class="carousel-left">
@@ -94,7 +117,9 @@ export default class Search {
                         <hr>
                         <div class="carousel-right">
                             <div class="carousel-right-top">
-                                <p>${new Date()}</p>
+                                <div class="date-box">
+                                    <p>${formatDate(new Date()) + ' ' + this.city + ',' + this.country}</p>
+                                </div>
                             </div>
                             <hr>
                         <div class="carousel-right-bottom">
@@ -108,7 +133,7 @@ export default class Search {
                 </li>
                 `;
 
-                //document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
+                document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
                 /*allArr.tempArr.push(Math.round(this.temp + (-273.15)));
                 allArr.tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
                 allArr.tempMinArr.push(Math.round(this.tempMin + (-273.15)));
