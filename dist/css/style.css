@@ -69,16 +69,51 @@ body {
 }
 
 .carousel-left {
-    width:50%; 
+    width:40%; 
 }
 
 .carousel-right {
-    width:50%;
+    width:60%;
     float: right;
 }
 
+.carousel-left-top{
 
-.carousel-left p {
+}
+
+.carousel-left-top p {
+    font-size: 200px;
+    margin: 50px 0px 0px 100px;
+}
+.carousel-left-bottom{
+    
+}
+
+.carousel-left-bottom p{
+    margin-top: 0px;
+}
+
+.carousel-right-top{
+    margin: 75px 0px 75px 100px;
+}
+
+.carousel-right-top p{
+    
+}
+
+.carousel-right-bottom{
+    display: flex;
+    margin: 0px 0px 100px 0px;
+}
+
+.weather{
+    height: 325px;
+    width: 33%;
+}
+
+
+
+/*.carousel-left p {
     font-size: 200px;
     margin: 10px 0 0 10px;
 }
@@ -86,7 +121,7 @@ body {
 .carousel-right p {
     font-size: 50px;
 }
-
+*/
 
 
 /**************
