@@ -1,5 +1,7 @@
 import {key, proxy} from '../config';
 import axios from 'axios';
+import { isUndefined, isString, isNumber } from 'util';
+import { type } from 'os';
 //import { log } from 'util';
 
 
@@ -40,6 +42,13 @@ export default class Search {
 
     async getResults() {
         try {
+            function noRain(rain){
+                if (typeof(rain) === "object"){
+                    return rain['3h'];
+                } else if(typeof(rain) === 'undefined' || rain === null) {
+                    return 'no rain';
+                }
+            }
 
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&cnt=5&APPID=${key}`)
             const tempArr = [];
@@ -68,11 +77,12 @@ export default class Search {
                 rainArr.push(this.rain);
                 weatherArr.push(this.weather);
             }    
-            
+
             const markup = `
                 <li class="carousel__slider">
                         <div class="carousel-left">
                             <div class="carousel-left-top">
+                                <img src="../dist/img/thermometer-64px.png" alt="">
                                 <p>${tempArr[0]+'°'}</p>
                             </div>
                             <hr>
@@ -92,19 +102,20 @@ export default class Search {
                             <hr>
                             <div class="weather"><p>${tempMinArr[0]+'°'}</p></div>
                             <hr>
-                        <div class="weather"><p>${Object.values(rainArr[1])}</p></div>
+                            <div class="weather"><p>${noRain(rainArr[0])}</p></div>
                         </div>
                     </div>
                 </li>
                 `;
 
-                document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
+                //document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
                 /*allArr.tempArr.push(Math.round(this.temp + (-273.15)));
                 allArr.tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
                 allArr.tempMinArr.push(Math.round(this.tempMin + (-273.15)));
                 allArr.cloudsArr.push(this.clouds)
                 allArr.rainArr.push(this.rain);
-                allArr.weatherArr.push(this.weather);*/      
+                allArr.weatherArr.push(this.weather);*/     
+                
         }
         catch (erorr){
             alert('error')
