@@ -40,14 +40,7 @@ export default class Search {
 
     async getResults() {
         try {
-            function getKeyByValue(object, value) { 
-                for (var prop in object) { 
-                    if (object.hasOwnProperty(prop)) { 
-                        if (object[prop] === value) 
-                        return prop; 
-                    } 
-                } 
-            }
+
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&cnt=5&APPID=${key}`)
             const tempArr = [];
             const tempMaxArr = [];
@@ -75,7 +68,6 @@ export default class Search {
                 rainArr.push(this.rain);
                 weatherArr.push(this.weather);
             }    
-            console.log(rainArr);
             
             const markup = `
                 <li class="carousel__slider">
@@ -106,7 +98,7 @@ export default class Search {
                 </li>
                 `;
 
-            document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
+                document.querySelector('.carousel__track').insertAdjacentHTML('beforebegin', markup);
                 /*allArr.tempArr.push(Math.round(this.temp + (-273.15)));
                 allArr.tempMaxArr.push(Math.round(this.tempMax + (-273.15)));
                 allArr.tempMinArr.push(Math.round(this.tempMin + (-273.15)));
