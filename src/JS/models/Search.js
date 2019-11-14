@@ -105,13 +105,14 @@ export default class Search {
                 <li class="carousel__slider">
                         <div class="carousel-left">
                             <div class="carousel-left-top">
-                                <img src="../dist/img/thermometer-64px.png" alt="">
-                                <p>${tempArr[0]+'°'}</p>
+                                <!--<img src="../dist/img/thermometer-64px.png" alt="">-->
+                                <p class="temp_main">${tempArr[0]+'°'}</p>
                             </div>
-                            <hr>
+                        
                             <div class="carousel-left-bottom">
-                                <p>${weatherArr[0]}</p>
-                                <p>${cloudsArr[0]}</p>
+                                <img src="./img/day-time/clear-sky.png" alt="">
+                                <p class="cloud">${cloudsArr[0]+'%'+ ' ' + 'Cloudyness'}</p>
+                                <p class="weather-tday">${weatherArr[0]}</p>
                             </div>
                         </div>
                         <hr>

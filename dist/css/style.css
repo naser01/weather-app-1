@@ -85,29 +85,31 @@ body {
 }
 
 .carousel-left-top{
-
+    margin: 0px;
 }
 
 .carousel-left-top p {
-    font-family: 'Code_Pro_Light_Demo-webfont';
-    font-size: 240px;
-    margin: 50px 0px 0px 60px;
-    padding-bottom: 0px;
+
 }
+
 .carousel-left-bottom{
     margin-top: 0px;
     background-color: rgba(0, 0, 0, 0.281);
-    height: 140px;
+    height: 185px;
     border-bottom-left-radius: 5px;
+    display: flex;
 }
 
 .carousel-left-bottom p{
     font-family: 'Code_Pro_Light_Demo-webfont';
+    font-size: 30px;
     color: white;
+    position: absolute;
 }
 
 .carousel-right-top{
-    margin: 75px 0px 75px 100px;
+    margin: 0px 0px 75px 80px;
+    bottom: 55px;
 }
 
 .carousel-right-top p{
@@ -120,17 +122,43 @@ body {
 }
 
 .carousel-right-bottom{
+    /*position: absolute;*/
     display: flex;
     margin: 0px 0px 100px 0px;
 }
 
 .weather{
+    position: relative;
     height: 325px;
     width: 33%;
+    font-family: 'Code_Pro_Light_Demo-webfont';
+    text-align: center;
+    font-size: 50px;
+    /*top: 40px;
+    left: 200px;*/
 }
 .date-box {
     background-color: rgba(0, 0, 0, 0.192);
-    top: -20px;
+}
+
+.temp_main {
+    font-family: 'Code_Pro_Light_Demo-webfont';
+    font-size: 230px;
+    margin: 50px 0px 0px 150px;
+    padding: 0px;
+}
+
+.cloud {
+    position: relative;
+    left: 185px;
+    bottom: 50px;
+    margin-bottom: 5px;
+}
+
+.weather-tday {
+    position: relative;
+    left: 185px;
+    bottom: 70px;
 }
 
 
