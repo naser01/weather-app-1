@@ -144,23 +144,27 @@ body {
 .temp_main {
     font-family: 'Code_Pro_Light_Demo-webfont';
     font-size: 230px;
-    margin: 50px 0px 0px 150px;
+    margin: 50px 0px 0px 125px;
     padding: 0px;
 }
 
 .cloud {
     position: relative;
-    left: 185px;
+    left: 145px;
     bottom: 50px;
     margin-bottom: 5px;
 }
 
 .weather-tday {
     position: relative;
-    left: 185px;
+    left: 145px;
     bottom: 70px;
 }
 
+.weather-tday-img {
+    width: 200px;
+    left: 50px;
+}
 
 /*.carousel-left p {
     font-size: 200px;

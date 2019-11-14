@@ -105,13 +105,13 @@ export default class Search {
                 <li class="carousel__slider">
                         <div class="carousel-left">
                             <div class="carousel-left-top">
-                                <!--<img src="../dist/img/thermometer-64px.png" alt="">-->
+                                <!--<img href="uds-static.api.aero/weather/icon/sm/01.png" alt="">-->
                                 <p class="temp_main">${tempArr[0]+'°'}</p>
                             </div>
                         
                             <div class="carousel-left-bottom">
-                                <img src="./img/day-time/clear-sky.png" alt="">
-                                <p class="cloud">${cloudsArr[0]+'%'+ ' ' + 'Cloudyness'}</p>
+                                <img src="./img/day-time/clear-sky.png" alt="" class="weather-tday-img">
+                                <p class="cloud">${cloudsArr[0]+'%'+ ' ' + 'Cloudy'}</p>
                                 <p class="weather-tday">${weatherArr[0]}</p>
                             </div>
                         </div>
@@ -124,9 +124,14 @@ export default class Search {
                             </div>
                             <hr>
                         <div class="carousel-right-bottom">
-                            <div class="weather"><p>${tempMaxArr[0]+'°'}</p></div>
+                            <div class="weather">
+                                <p>${tempMaxArr[0]+'°'}</p>
+                            </div>
                             <hr>
-                            <div class="weather"><p>${tempMinArr[0]+'°'}</p></div>
+                            <div class="weather">
+                                
+                                <p>${tempMinArr[0]+'°'}</p>
+                            </div>
                             <hr>
                             <div class="weather"><p>${noRain(rainArr[0])}</p></div>
                         </div>
