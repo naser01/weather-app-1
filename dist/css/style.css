@@ -6,10 +6,17 @@ body {
 @font-face {
     font-family: "Code_Pro_Demo-webfont";
     src: url(./fonts/Webfonts/codepro_regulardemo_macroman/Code_Pro_Demo-webfont.woff) format("truetype");
-    font-family: "Code_Pro_Light_Demo-webfont";
+    font-family: "Code_Pro-1";
     src: url(./font2/Webfonts/codepro_lightdemo_macroman/Code_Pro_Light_Demo-webfont.woff) format("truetype");
 }
 
+.coldiac {
+    font-family: 'coldiac';
+}
+
+.code_pro-1 {
+    font-family: 'Code-Pro-1';
+}
 /****HEADER****/
 .search {
     margin-left: 500px;
@@ -101,10 +108,8 @@ body {
 }
 
 .carousel-left-bottom p{
-    font-family: 'Code_Pro_Light_Demo-webfont';
-    font-size: 30px;
+    font-family: 'Code_Pro-1';
     color: white;
-    position: absolute;
 }
 
 .carousel-right-top{
@@ -113,7 +118,7 @@ body {
 }
 
 .carousel-right-top p{
-    font-family: 'Code_Pro_Light_Demo-webfont';
+    font-family: 'Code_Pro-1';
     font-size: 50px;
     color: white;
     padding-top: 15px;
@@ -122,50 +127,60 @@ body {
 }
 
 .carousel-right-bottom{
-    /*position: absolute;*/
+    position: relative;
     display: flex;
     margin: 0px 0px 100px 0px;
+    bottom: 70px;
 }
 
 .weather{
     position: relative;
     height: 325px;
     width: 33%;
-    font-family: 'Code_Pro_Light_Demo-webfont';
     text-align: center;
     font-size: 50px;
-    /*top: 40px;
-    left: 200px;*/
+    font-family: 'Code_Pro-1';
 }
 .date-box {
     background-color: rgba(0, 0, 0, 0.192);
 }
 
 .temp_main {
-    font-family: 'Code_Pro_Light_Demo-webfont';
+    font-family: 'Code_Pro-1';
     font-size: 230px;
     margin: 50px 0px 0px 125px;
     padding: 0px;
 }
 
 .cloud {
+    display: flex;
     position: relative;
-    left: 145px;
-    bottom: 50px;
-    margin-bottom: 5px;
+    left: 135px;
+    bottom: 120px;
+    font-size: 30px;
 }
 
 .weather-tday {
+    display: flex;
     position: relative;
-    left: 145px;
-    bottom: 70px;
+    left: 135px;
+    bottom: 130px;
+    font-size: 30px;
 }
 
 .weather-tday-img {
     width: 200px;
+    height: 100px;
     left: 50px;
 }
 
+.weather-icons {
+    position: relative;
+    display: inline;
+    fill: rgb(9, 96, 226);
+    left: 20px;
+    top: 40px;
+}
 /*.carousel-left p {
     font-size: 200px;
     margin: 10px 0 0 10px;

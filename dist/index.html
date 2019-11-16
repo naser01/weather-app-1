@@ -1,34 +1,17 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Weather Search</title>
-</head>
-
-<body>
-    
-    <form class="search">
-        <input type="text" placeholder="City" id="search__val">
-        <button id="search-btn">Search</button>
-    </form>
-    <hr>
-
-
-    <div class="carousel">
-        <button class="carousel__button btn-left">
-            <img src="./img/iconmonstr-arrow-left-64.svg" alt="">
-        </button>
-        <div class="carousel__track_container">
-            <ul class="carousel__track">
-                <li class="carousel__slider"></li>
-            </ul>
-        </div>
-        <button class="carousel__button btn-right">
-            <img src="./img/iconmonstr-arrow-right-63.svg" alt="">
-        </button>
-    </div>
-
-<script type="text/javascript" src="JS/bundle.js"></script></body>
-</html>
+Html Webpack Plugin:
+<pre>
+  ReferenceError: tempArr is not defined
+  
+  - loader.js:4 eval
+    [index.html?.]/[html-webpack-plugin]/lib/loader.js:4:10
+  
+  - loader.js:19 module.exports
+    [index.html?.]/[html-webpack-plugin]/lib/loader.js:19:3
+  
+  - index.js:284 Promise.resolve.then
+    [weather-app-1]/[html-webpack-plugin]/index.js:284:18
+  
+  - next_tick.js:68 process._tickCallback
+    internal/process/next_tick.js:68:7
+  
+</pre>
