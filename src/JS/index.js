@@ -1,7 +1,7 @@
 import Search from './models/Search';
 import searchView from './views/searchView.js';
-import { elements } from './views/base';
-import allArr from './models/Search';
+import elements from './views/base';
+import { loader } from './views/base';
 
 
 /*const search = new Search('london');
@@ -26,8 +26,7 @@ const controlSearch = async () => {
         try {
             //Search for Weather Results
             await state.search.getResults();
-            
-            
+            loader();
         }
         catch (error) {
             alert('Something wrong with the search...')

@@ -63,12 +63,18 @@ body {
     height: 500px;
     margin: 0 auto;
 }
+.carousel__track_container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
 
 .carousel__track {
     margin: 0;
     padding: 0;
     list-style: none;
-    
+    position: relative;
+    transition: transform 250ms ease-in;
 }
 
 .carousel__slider {
@@ -95,9 +101,6 @@ body {
     margin: 0px;
 }
 
-.carousel-left-top p {
-
-}
 
 .carousel-left-bottom{
     margin-top: 0px;

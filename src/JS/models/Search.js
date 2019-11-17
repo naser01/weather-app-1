@@ -107,12 +107,8 @@ export default class Search {
             }
             
             const markup = `
-                <button class="carousel__button btn-left">
-                    <img src="./img/iconmonstr-arrow-left-64.svg" alt="">
-                </button>
-                <div class="carousel__track_container">
-                    <ul class="carousel__track">
-                        <li class="carousel__slider">
+                
+                        <li class="carousel__slider current__slide">
                             <div class="carousel-left">
                                 <div class="carousel-left-top">
                                     <p class="temp_main">${tempArr[0]+'°'}</p>
@@ -150,21 +146,18 @@ export default class Search {
                                 </div>
                             </div>
                         </li>
-
-
-
                         <li class="carousel__slider">
                             <div class="carousel-left">
                                 <div class="carousel-left-top">
                                     
-                                    <p class="temp_main">${tempArr[0]+'°'}</p>
+                                    <p class="temp_main">${tempArr[1]+'°'}</p>
                                 </div>
                                 <div class="carousel-left-bottom">
                                     <div class="weather-icons">
                                     
                                     </div>
-                                    <p class="cloud">${weatherIcon(cloudsArr[0]) + '%' + ' ' + 'Cloudy'}</p>
-                                    <p class="weather-tday">${weatherArr[0]}</p>
+                                    <p class="cloud">${weatherIcon(cloudsArr[1]) + '%' + ' ' + 'Cloudy'}</p>
+                                    <p class="weather-tday">${weatherArr[1]}</p>
                                     </div>
                                 </div>
                             </div>  
@@ -177,35 +170,32 @@ export default class Search {
                                 <div class="carousel-right-bottom">
                                     <div class="weather">
                                         <p>temp max</p>
-                                        <p>${tempMaxArr[0]+'°'}</p>
+                                        <p>${tempMaxArr[1]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p>temp min</p>
-                                        <p>${tempMinArr[0]+'°'}</p>
+                                        <p>${tempMinArr[1]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p style="margin-bottom: 110px;">rain</p>
-                                        <p>${noRain(rainArr[0])}</p>
+                                        <p>${noRain(rainArr[1])}</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
-
-
-
                         <li class="carousel__slider">
                             <div class="carousel-left">
                                 <div class="carousel-left-top">                                   
-                                    <p class="temp_main">${tempArr[0]+'°'}</p>
+                                    <p class="temp_main">${tempArr[2]+'°'}</p>
                                 </div>
                                 <div class="carousel-left-bottom">
                                     <div class="weather-icons">
                                     
                                     </div>
-                                    <p class="cloud">${weatherIcon(cloudsArr[0]) + '%' + ' ' + 'Cloudy'}</p>
-                                    <p class="weather-tday">${weatherArr[0]}</p>
+                                    <p class="cloud">${weatherIcon(cloudsArr[2]) + '%' + ' ' + 'Cloudy'}</p>
+                                    <p class="weather-tday">${weatherArr[2]}</p>
                                     </div>
                                 </div>
                             </div>
@@ -218,36 +208,32 @@ export default class Search {
                                 <div class="carousel-right-bottom">
                                     <div class="weather">
                                         <p>temp max</p>
-                                        <p>${tempMaxArr[0]+'°'}</p>
+                                        <p>${tempMaxArr[2]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p>temp min</p>
-                                        <p>${tempMinArr[0]+'°'}</p>
+                                        <p>${tempMinArr[2]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p style="margin-bottom: 110px;">rain</p>
-                                        <p>${noRain(rainArr[0])}</p>
+                                        <p>${noRain(rainArr[2])}</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
-
-
-
-
                         <li class="carousel__slider">
                             <div class="carousel-left">
                                 <div class="carousel-left-top">
-                                    <p class="temp_main">${tempArr[0]+'°'}</p>
+                                    <p class="temp_main">${tempArr[3]+'°'}</p>
                                 </div>
                                 <div class="carousel-left-bottom">
                                     <div class="weather-icons">
                                     
                                     </div>
-                                    <p class="cloud">${weatherIcon(cloudsArr[0]) + '%' + ' ' + 'Cloudy'}</p>
-                                    <p class="weather-tday">${weatherArr[0]}</p>
+                                    <p class="cloud">${weatherIcon(cloudsArr[3]) + '%' + ' ' + 'Cloudy'}</p>
+                                    <p class="weather-tday">${weatherArr[3]}</p>
                                     </div>
                                 </div>
                             </div> 
@@ -260,34 +246,31 @@ export default class Search {
                                 <div class="carousel-right-bottom">
                                     <div class="weather">
                                         <p>temp max</p>
-                                        <p>${tempMaxArr[0]+'°'}</p>
+                                        <p>${tempMaxArr[3]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p>temp min</p>
-                                        <p>${tempMinArr[0]+'°'}</p>
+                                        <p>${tempMinArr[3]+'°'}</p>
                                     </div>                                    
                                     <div class="weather">
                                         <p style="margin-bottom: 110px;">rain</p>
-                                        <p>${noRain(rainArr[0])}</p>
+                                        <p>${noRain(rainArr[3])}</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
-
-
-
                         <li class="carousel__slider">
                             <div class="carousel-left">
                                 <div class="carousel-left-top">
-                                    <p class="temp_main">${tempArr[0]+'°'}</p>
+                                    <p class="temp_main">${tempArr[4]+'°'}</p>
                                 </div>
                                 <div class="carousel-left-bottom">
                                     <div class="weather-icons">
 
                                     </div>
-                                    <p class="cloud">${weatherIcon(cloudsArr[0]) + '%' + ' ' + 'Cloudy'}</p>
-                                    <p class="weather-tday">${weatherArr[0]}</p>
+                                    <p class="cloud">${weatherIcon(cloudsArr[4]) + '%' + ' ' + 'Cloudy'}</p>
+                                    <p class="weather-tday">${weatherArr[4]}</p>
                                     </div>
                                 </div>
                             </div> 
@@ -300,40 +283,30 @@ export default class Search {
                                 <div class="carousel-right-bottom">
                                     <div class="weather">
                                         <p>temp max</p>
-                                        <p>${tempMaxArr[0]+'°'}</p>
+                                        <p>${tempMaxArr[4]+'°'}</p>
                                     </div>
                                     
                                     <div class="weather">
                                         <p>temp min</p>
-                                        <p>${tempMinArr[0]+'°'}</p>
+                                        <p>${tempMinArr[4]+'°'}</p>
                                     </div>                                    
                                     <div class="weather">
                                         <p style="margin-bottom: 110px;">rain</p>
-                                        <p>${noRain(rainArr[0])}</p>
+                                        <p>${noRain(rainArr[4])}</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                    </ul>
-                </div>    
-                <button class="carousel__button btn-right">
-                    <img src="./img/iconmonstr-arrow-right-63.svg" alt="">
-                </button>
+                   
                 `;
+            document.querySelector('.carousel__track').insertAdjacentHTML('beforeend', markup); 
 
-            document.querySelector('.carousel').insertAdjacentHTML('beforeend', markup); 
-
-            const track = document.querySelector('.carousel__track');
-            const slides = Array.from(track.children);
-
-            console.log(slides);
         }
         catch (erorr){
             alert('error')
         }
     }
 }
-
 
 
   /*                
@@ -363,7 +336,16 @@ export default class Search {
                 allArr.weatherArr.push(this.weather);*/ 
 
 
-
+/**<button class="carousel__button btn-left">
+                    <img src="./img/iconmonstr-arrow-left-64.svg" alt="">
+                </button>
+                <div class="carousel__track_container">
+                    <ul class="carousel__track">
+ </ul>
+                </div>    
+                <button class="carousel__button btn-right">
+                    <img src="./img/iconmonstr-arrow-right-63.svg" alt="">
+                </button> */
 
 
 
