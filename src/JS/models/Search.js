@@ -2,7 +2,8 @@ import {key, proxy} from '../config';
 import axios from 'axios';
 import { isUndefined, isString, isNumber } from 'util';
 import { type } from 'os';
-//import { log } from 'util';
+import { log } from 'util';
+import {renderLoader, clearLoader} from '../views/base'
 
 
 //****DATA ARRAYS****//
@@ -300,7 +301,7 @@ export default class Search {
                    
                 `;
             document.querySelector('.carousel__track').insertAdjacentHTML('beforeend', markup); 
-
+            clearLoader();
         }
         catch (erorr){
             alert('error')

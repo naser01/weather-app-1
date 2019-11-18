@@ -1,14 +1,12 @@
 import Search from './models/Search';
-import searchView from './views/searchView.js';
-import elements from './views/base';
-import { loader } from './views/base';
+import {getInput, clearSearch} from './views/searchView.js';
+//import elements from './views/base';
+import { carouselSlider } from './views/base';
+import {renderLoader, elements, clearLoader} from './views/base'
 
+const getInput = elements.searchVal.value
 
-/*const search = new Search('london');
-search.getResults();
-search.pushData();
-*/
-
+console.log(getInput);
 const state = {};
 
 /** 
@@ -17,16 +15,18 @@ const state = {};
 
 const controlSearch = async () => {
     //1)Get query from view
-    //const query = searchView.getInput();
-    const query = 'london';
+    //const query = elements.searchVal.value;
+    console.log(query);
+    //const query = 'london';
     
     if (query) {
         // 2) New search object and add to state
         state.search = new Search(query);
+        renderLoader();
         try {
             //Search for Weather Results
             await state.search.getResults();
-            loader();
+            carouselSlider();
         }
         catch (error) {
             alert('Something wrong with the search...')
