@@ -1,12 +1,10 @@
 import Search from './models/Search';
-import {getInput, clearSearch} from './views/searchView.js';
+//import {getInput, clearSearch} from './views/searchView.js';
 //import elements from './views/base';
-import { carouselSlider } from './views/base';
-import {renderLoader, elements, clearLoader} from './views/base'
+//import { carouselSlider } from './views/base';
+import {renderLoader, elements, clearSearch, carouselSlider, clearResults, removeBtn} from './views/base'
 
-const getInput = elements.searchVal.value
 
-console.log(getInput);
 const state = {};
 
 /** 
@@ -15,17 +13,22 @@ const state = {};
 
 const controlSearch = async () => {
     //1)Get query from view
-    //const query = elements.searchVal.value;
-    console.log(query);
-    //const query = 'london';
+    const query = String(elements.searchVal.value);
+    
     
     if (query) {
         // 2) New search object and add to state
         state.search = new Search(query);
+        clearSearch();
+        clearResults();
         renderLoader();
+
+        
+
         try {
             //Search for Weather Results
             await state.search.getResults();
+            removeBtn();
             carouselSlider();
         }
         catch (error) {
@@ -34,7 +37,12 @@ const controlSearch = async () => {
     }
 }
 
-controlSearch();
+
+elements.searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    controlSearch();
+});
+//controlSearch();
 
 /*elements.searchForm.addEventListener('click', e =>{
     e.preventDefault();

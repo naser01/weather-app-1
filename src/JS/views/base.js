@@ -1,14 +1,14 @@
 export const  elements = {
     searchForm: document.querySelector('.search'),
-    searchVal: document.getElementById('search__val'),
+    searchVal: document.querySelector('.search__val'),
     searchBtn: document.getElementById('search-btn'),
     carouselTrackContainer: document.querySelector('.carousel__track_container')
 };
 
 
 export const carouselSlider = () => {
-    const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
+    const track = document.querySelector('.carousel__track');
     const nextButton = document.querySelector('.btn-right');
     const prevButton = document.querySelector('.btn-left');
     
@@ -22,7 +22,6 @@ export const carouselSlider = () => {
     slides.forEach(setSlidePosition);
     
     const hideShowButton = (slides, nextButton, prevButton, targetIndex) => {
-        //const current = track.querySelector('.current__slide');
         
         if (targetIndex === 0) {
             prevButton.classList.add('is-hidden');
@@ -82,4 +81,16 @@ export const clearLoader = () => {
     const loader = document.querySelector(`.${elementStrings.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
 };
+
+export const clearSearch = () => {
+    elements.searchVal.value = '';
+};
+
+export const clearResults = () => {
+  document.querySelector('.carousel__track').innerHTML = ' ';
+};
+
+export const removeBtn = () => {
+    document.querySelector('.btn-right').classList.remove('is-hidden');
+}
 
